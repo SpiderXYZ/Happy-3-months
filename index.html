@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 3 months bujji </title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <audio id="bg-music">
+        <source src="assets/songs/lagu.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="petals" id="petals-container"></div>
+
+    <div id="cover-screen" onclick="showPopup()">
+        <div class="gift-box" id="gift-icon">💜</div>
+        <div class="tap-text" id="tap-text">A lil surpirse for you babygurl</div>
+    </div>
+
+    <div id="popup-overlay" class="hidden">
+    <div id="popup-box">
+        <h3 class="serif">Happy 3 month anniversary dumbass , I love you so much 🥺</h3>
+        <div class="popup-buttons">
+            <button id="btn-yes" class="popup-btn" onclick="confirmOpenGift()">Hehe , I love you too ❤️</button>
+            <button id="btn-no" class="popup-btn">Fuh nah I dont 😝</button>
+        </div>
+    </div>
+</div>
+
+    <div id="main-content">
+        
+        <div class="music-widget">
+            <div class="music-top">
+                <img id="player-cover" src="assets/cover/Blue_cover.jpg" alt="Album Art">
+                <div class="music-info">
+                    <span class="title" id="player-title">Blue</span>
+                    <span class="artist" id="player-artist">Yung Kai</span>
+                </div>
+            </div>
+
+            <div class="progress-wrapper">
+    <input type="range" id="seek-bar" value="0" min="0" max="100" step="0.1">
+    <div class="time-display">
+        <span id="current-time">0:00</span>
+        <span id="duration">0:00</span>
+    </div>
+</div>
+
+            <div class="controls">
+                <span onclick="prevSong()">⏮</span>
+                <span id="play-pause-btn" onclick="toggleMusic()">⏸</span>
+                <span onclick="nextSong()">⏭</span>
+            </div>
+        </div>
+
+        <section class="hero-section">
+            <p class="subtitle">In every lifetime, I'd still choose you 💖</p>
+            <h1 class="title-main serif">You're all I want , you're my everything</h1>
+            <h1 class="title-main serif">Lala</h1>
+            <img src="assets/photos/fotoawal.jpg" alt="Pemegang Hatiku" style="width: 160px; height: 160px; object-fit: cover; border-radius: 50%; border: 3px solid rgba(255, 255, 255, 0.2); box-shadow: 0 0 25px rgba(229,115,115,0.4); margin-bottom: 25px;">
+            <p class="text-body" style="margin-top:10px;">Each petal holds a whisper about how much you mean to me </p>
+            <div style="font-size: 24px; margin-top:20px;">🌸</div>
+            <button class="next-btn" onclick="nextSection(this)">💜</button>
+        </section>
+
+        <section>
+            <p class="subtitle">our melodies</p>
+            <h2 class="title-sub serif">Songs that remind me of you </h2>
+            <p class="subtitle">U can click on cover to change song hehe</p>
+            <div class="playlist-grid">
+
+                <div class="photo-item" style="cursor: pointer;" onclick="changeSong('assets/songs/SandC.mp3', 'Strawberries n Cigarettes', 'Troye Sivan', 'assets/cover/SandC_cover.jpg')">
+                    <img src="assets/cover/SandC_cover.jpg" alt="Strawberries n Cigarettes Cover" style="filter: none;">
+                    <p class="photo-caption" style="font-size: 16px; margin-top: 10px; color: #fff; font-family: 'Montserrat', sans-serif;">Strawberries n Cigarettes</p>
+                    <p style="font-size: 11px; color: var(--text-muted);">Troye Sivan</p>
+                </div>
+
+                <div class="photo-item" style="cursor: pointer;" onclick="changeSong('assets/songs/Blue.mp3', 'Blue', 'Yung Kai', 'assets/cover/Blue_cover.jpg')">
+                    <img src="assets/cover/Blue_cover.jpg" alt="Blue Cover" style="filter: none;">
+                    <p class="photo-caption" style="font-size: 16px; margin-top: 10px; color: #fff; font-family: 'Montserrat', sans-serif;">Blue</p>
+                    <p style="font-size: 11px; color: var(--text-muted);">Yung Kai</p>
+                </div>
+                
+                <div class="photo-item" style="cursor: pointer;" onclick="changeSong('assets/songs/Malang_Sajna.mp3', 'Malang Sajna', 'Sachet Tandon', 'assets/cover/malang_sajna_cover.jpg')">
+                    <img src="assets/cover/malang_sajna_cover.jpg" alt="Malang Sajna Cover " style="filter: none;">
+                    <p class="photo-caption" style="font-size: 16px; margin-top: 10px; color: #fff; font-family: 'Montserrat', sans-serif;">Malang Sajna</p>
+                    <p style="font-size: 11px; color: var(--text-muted);">Sachet Tandon</p>
+                </div>
+
+                <div class="photo-item" style="cursor: pointer;" onclick="changeSong('assets/songs/Her.mp3', 'Her', 'JVKE', 'assets/cover/Her_cover.jpg')">
+                    <img src="assets/cover/Her_cover.jpg" alt="Her Cover" style="filter: none;">
+                    <p class="photo-caption" style="font-size: 16px; margin-top: 10px; color: #fff; font-family: 'Montserrat', sans-serif;">Her</p>
+                    <p style="font-size: 11px; color: var(--text-muted);">JVKE</p>
+                </div>
+
+                <div class="photo-item" style="cursor: pointer;" onclick="changeSong('assets/songs/Mella_Mellaga.mp3', 'Mella Mellaga', 'Sid Sriram', 'assets/cover/Mella_Mellagaa_cover.jpg')">
+                    <img src="assets/cover/Mella_Mellagaa_cover.jpg" alt="Mella Mellaga Cover" style="filter: none;">
+                    <p class="photo-caption" style="font-size: 16px; margin-top: 10px; color: #fff; font-family: 'Montserrat', sans-serif;">Mella Mellaga</p>
+                    <p style="font-size: 11px; color: var(--text-muted);">Sid Sriram</p>
+                </div>
+
+            </div>
+            <button class="next-btn" onclick="nextSection(this)">💜</button>
+        </section>
+
+        <section>
+            <p class="subtitle">🌸 from the bottom of my heart 🌸</p>
+            <h2 class="title-sub serif">You are my<br>wildest dream<br>come true.</h2>
+            <p class="text-body">
+                In a world full of ordinary moments, you are THE extraordinary one. The way you laugh, the way you care, the way you simply exist , it fills every corner of my world with something I never knew I needed .<br><br>
+                These flowers may fade, and words may never be enough, but let them carry a little piece of what my heart struggles to say how deeply I adore you, how softly you've taken over my thoughts, and how every little thing about you feels like home to me in the most beautiful way.<br><br> I don't want the world , I just want you LILY .
+            </p>
+            <p class="serif" style="margin-top: 40px; font-style: italic; font-size: 24px; color: var(--text-muted);">
+                - I wanna be yours  -
+            </p>
+            <button class="next-btn" onclick="nextSection(this)">💜</button>
+        </section>
+
+        <section>
+            <p class="subtitle">There is so much I cannot express but here are few reasons about</p>
+            <h2 class="title-sub serif">Why I Love you and will always do</h2>
+            <div class="reasons-grid">
+                <div class="card"><div class="card-icon">✨</div><h3 class="serif">Your Smile</h3><p>It lights up every room and every corner of my heart simultaneously.</p></div>
+                <div class="card"><div class="card-icon">🌟</div><h3 class="serif">Your Soul</h3><p>Rare, genuine, and more beautiful than any flower ever grown.</p></div>
+                <div class="card"><div class="card-icon">💖</div><h3 class="serif">Your Kindness</h3><p>The way you love the world makes me want to be better every single day.</p></div>
+                <div class="card"><div class="card-icon">🎵</div><h3 class="serif">Your Laughter</h3><p>The best sound in existence. My favourite melody, always.</p></div>
+                <div class="card"><div class="card-icon">💪</div><h3 class="serif">Your Strength</h3><p>You carry so much grace through everything. I admire you endlessly.</p></div>
+                <div class="card"><div class="card-icon">🌸</div><h3 class="serif">Simply You</h3><p>Every version of you, every moment - you are more than enough.</p></div>
+            </div>
+            <button class="next-btn" onclick="nextSection(this)">💜</button>
+        </section>
+
+        <section>
+            <p class="subtitle">A little glimpse into the moments that make her, her ✨.</p>
+            <h2 class="title-sub serif">Baby You're<br>Divine</h2>
+            <div class="photo-grid">
+                <div class="photo-item"><img src="assets/photos/foto1.jpg" alt="You"><p class="photo-caption">you</p></div>
+                <div class="photo-item"><img src="assets/photos/foto2.jpg" alt="Are"><p class="photo-caption">are</p></div>
+                <div class="photo-item"><img src="assets/photos/foto3.jpg" alt="So"><p class="photo-caption">so</p></div>
+                <div class="photo-item"><img src="assets/photos/foto4.jpg" alt="Beautiful"><p class="photo-caption">beautiful .</p></div>
+                <div class="photo-item"><img src="assets/photos/foto5.jpg" alt="literally"><p class="photo-caption">literally</p></div>
+                <div class="photo-item"><img src="assets/photos/foto6.jpg" alt="An"><p class="photo-caption">an</p></div>
+                <div class="photo-item"><img src="assets/photos/foto7.jpg" alt="Angel"><p class="photo-caption">angel</p></div>
+                <div class="photo-item"><img src="assets/photos/foto8.jpg" alt="💜"><p class="photo-caption">💜</p></div>
+            </div>
+            <button class="next-btn" onclick="nextSection(this)">💜</button>
+        </section>
+
+        <section>
+            <p class="subtitle">A little scrapbook of us 💌</p>
+            <h2 class="title-sub serif">Three months down, a lifetime of memories to go 💖</h2>
+            <div class="video-grid" style="margin-top: 30px;">
+                <div class="video-container" style="margin: 0; max-width: 100%;">
+                    <video controls controlsList="nodownload" style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover;">
+                        <source src="assets/video/video2.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-container" style="margin: 0; max-width: 100%;">
+                    <video controls controlsList="nodownload" style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover;">
+                        <source src="assets/video/video3.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-container" style="margin: 0; max-width: 100%;">
+                    <video controls controlsList="nodownload" style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover;">
+                        <source src="assets/video/video4.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-container" style="margin: 0; max-width: 100%;">
+                    <img src="assets/photos/fotospec.jpg" alt="bracelets" style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block;">
+                </div>
+            </div>
+            <p class="text-body" style="font-size: 13px; margin-top: 20px;">Every second with you is a treasure</p>
+            <button class="next-btn" onclick="nextSection(this)">💜</button>
+        </section>
+
+        <section>
+            <p class="subtitle">something i always wish for you</p>
+            <h2 class="title-sub serif">My Best Prayers</h2>
+            <div style="background: rgba(255, 255, 255, 0.03); border-left: 3px solid var(--accent); padding: 30px 40px; margin-top: 20px; max-width: 600px; border-radius: 0 15px 15px 0; box-shadow: 5px 5px 20px rgba(0,0,0,0.2);">
+                <p class="serif" style="font-size: 24px; font-style: italic; line-height: 1.8; color: #fff;">
+                    "May life be gentle with you, may your heart always find reasons to smile, and may every dream you carry slowly find its way to you. I hope you always have the courage to chase what you love, the strength to get through what feels difficult, and may you always be surrounded by those who love you. And whenever you doubt yourself, I hope you remember that I'll always be here, quietly cheering for you, believing in you and loving you through it all ❤️"
+                </p>
+            </div>
+            <p class="text-body" style="font-size: 14px; margin-top: 25px;">Whatever life brings your way, I'll always be right beside you. loving you, annoying you, and cheering for you through it all 💖✨ </p>
+            <button class="next-btn" onclick="nextSection(this)">💜</button>
+        </section>
+
+        <section>
+            <div style="font-size: 28px; letter-spacing: 10px; margin-bottom: 20px;">🌸🌺🌹</div>
+            <p class="subtitle">always & forever</p>
+            <h1 class="title-sub serif">You Are Loved<br>Beyond Words</h1>
+            <p class="text-body" style="font-size: 14px; max-width: 600px;">
+                No matter where life takes us, I hope you always know that you are my favorite part of this beautiful little life. If I could, I'd bottle up every laugh, every silly moment, every hug, and every little memory with you, just so I could relive them forever. You deserve all the love, all the flowers, all the softest moments in the world , and if you'll let me, I'd love to spend my forever giving them to you.
+            </p>
+            <p class="serif" style="margin-top: 50px; font-style: italic; color: var(--text-muted); font-size:18px;">
+                made with all my love, just for you 💜
+            </p>
+        </section>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
