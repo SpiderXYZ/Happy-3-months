@@ -7,7 +7,7 @@ const durationDisplay = document.getElementById('duration');
 const playlist = [
     { src: 'assets/songs/SandC.mp3', title: 'Strawberries n Cigarettes', artist: 'Troye Sivan', cover: 'assets/cover/SandC_cover.jpg' },
     { src: 'assets/songs/Blue.mp3', title: 'Blue', artist: 'Yung Kai', cover: 'assets/cover/Blue_cover.jpg' },
-    { src: 'assets/songs/Malang_Sajna.mp3', title: 'Malang Sajna', artist: 'Sachet Tandon', cover: 'assets/cover/Malang_Sajna_cover.jpg' },
+    { src: 'assets/songs/Malang_Sajna.mp3', title: 'Malang Sajna', artist: 'Sachet Tandon', cover: 'assets/cover/malang_sajna_cover.jpg' },
     { src: 'assets/songs/Her.mp3', title: 'Her', artist: 'JVKE', cover: 'assets/cover/Her_cover.jpg' },
     { src: 'assets/songs/Mella_Mellaga.mp3', title: 'Mella Mellagaa', artist: 'Sid Sriram', cover: 'assets/cover/Mella_Mellagaa_cover.jpg' }
 ];
